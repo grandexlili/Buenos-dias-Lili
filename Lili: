@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buenos días, mi amor</title>
+  <style>
+    /* Estilo base */
+    body {
+      font-family: 'Cursive', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-image: url('lirios-fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      line-height: 1.6;
+      text-align: center;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      font-size: 1.8rem;
+    }
+
+    .hero {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .flower-container {
+      margin: 20px 0;
+    }
+
+    .flower {
+      width: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .flower:hover {
+      transform: scale(1.2);
+    }
+
+    .message {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover, .close:focus {
+      color: #000;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Buenos días, las flores te envidian tu belleza</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Siempre los días son buenos porque puedo estar contigo,</h2>
+    <h2>la mujer más bella y a quien yo le doy mi ser.</h2>
+    <p class="hero-text">Haz clic en el lirio para abrir una sorpresa 💖</p>
+    <div class="flower-container">
+      <img src="lirio.png" alt="Lirio" class="flower" onclick="openSurprise()">
+    </div>
+  </section>
+
+  <section class="message">
+    <h3>Te daré los buenos días todos los días</h3>
+    <p>
+      Tú eres mi razón para sonreír, mi inspiración para seguir adelante, y la joya más preciosa de mi vida.
+    </p>
+  </section>
+
+  <footer>
+    <p>💖 Hecho con amor para ti, mi vida. 💖</p>
+  </footer>
+
+  <!-- Modal para la imagen -->
+  <div id="surpriseModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSurprise()">&times;</span>
+      <img src="nosotros.jpg" alt="Nosotros" class="modal-img">
+      <p>Te amo, gracias por ser mi todo 💖</p>
+    </div>
+  </div>
+
+  <!-- Música -->
+  <audio id="backgroundMusic" src="cancion.mp3" loop></audio>
+
+  <script>
+    function openSurprise() {
+      document.getElementById("backgroundMusic").play();
+      document.getElementById("surpriseModal").style.display = "block";
+    }
+
+    function closeSurprise() {
+      document.getElementById("surpriseModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
